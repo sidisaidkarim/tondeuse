@@ -31,12 +31,6 @@ public class FileInputParser implements InputParser{
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String line;
             while ((line = reader.readLine()) != null) {
-                /*String[] mowerInit = line.split(" ");
-                int x = Integer.parseInt(mowerInit[0]);
-                int y = Integer.parseInt(mowerInit[1]);
-                Direction direction = Direction.valueOf(mowerInit[2]);
-                Mower mower = new StandardMower(x, y, direction);
-                mowers.add(mower);*/
 
                 String regex = "([1-9]+ [1-9]+ [N,E,S,W])";
                 Pattern pattern = Pattern.compile(regex);
